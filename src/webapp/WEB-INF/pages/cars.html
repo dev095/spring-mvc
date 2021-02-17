@@ -12,14 +12,14 @@
 
 <h2>My Cars</h2>
 <div>
-    <table border="1" bgcolor="grey">
+    <table bgcolor="silver" border="1">
         <tr>
             <th>Brand</th>
             <th>Model</th>
             <th>Color</th>
         </tr>
 
-        <tr th:each="car:${cars}">
+        <tr th:each="car : ${cars}">
             <td th:utext="${car.brand}">Brand</td>
             <td th:utext="${car.model}">Model</td>
             <td th:utext="${car.color}">Color</td>
