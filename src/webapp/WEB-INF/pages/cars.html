@@ -3,28 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>My Cars</title>
-    <style>
 
+    <style type="text/css">
+        .tg {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border-color: #ccc;
+        }
+
+        .tg td {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            padding: 10px 5px;
+            border-style: solid;
+            border-width: 1px;
+            overflow: hidden;
+            word-break: normal;
+            border-color: #ccc;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .tg th {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            padding: 10px 5px;
+            border-style: solid;
+            border-width: 1px;
+            overflow: hidden;
+            word-break: normal;
+            border-color: #ccc;
+            color: #333;
+            background-color: #f0f0f0;
+        }
+
+        .tg .h2 {
+            background-color: #f9f9f9
+        }
     </style>
 
 </head>
 <body>
 
 <h2>My Cars</h2>
-<div>
-    <table bgcolor="silver" border="1">
-        <tr>
-            <th>Brand</th>
-            <th>Model</th>
-            <th>Color</th>
-        </tr>
 
-        <tr th:each="car : ${cars}">
-            <td th:utext="${car.brand}">Brand</td>
-            <td th:utext="${car.model}">Model</td>
-            <td th:utext="${car.color}">Color</td>
-        </tr>
-    </table>
-</div>
+<table class="tg">
+    <tr>
+        <th width="80">Brand</th>
+        <th width="80">Model</th>
+        <th width="80">Color</th>
+    </tr>
+
+    <tr th:each="car : ${cars}">
+        <td th:utext="${car.brand}">Brand</td>
+        <td th:utext="${car.model}">Model</td>
+        <td th:utext="${car.color}">Color</td>
+    </tr>
+</table>
+
 </body>
 </html>
